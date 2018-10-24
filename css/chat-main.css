@@ -1,0 +1,35 @@
+/* Debug divs */
+/*
+div {
+  border: 1px solid black;
+}
+*/
+.bot {
+  position: absolute;
+  height: 20vmin;
+  bottom: 5vmin;
+  text-align: center;
+}
+.bot-emo {
+  left: 5vw;
+  width: 20vw;
+  background: url("../images/bot.png") no-repeat center bottom / contain;
+}
+.chat-block {
+  left: 25vw;
+  width: 50vw;
+}
+.presents {
+  left: 75vw;
+  width: 20vw;
+}
+.bot-chat-input {
+  width: 30vw;
+  border: none;
+  border-bottom: 1px solid;
+}
+.top-menu {
+  position: absolute;
+  top: 0vh;
+  right: 0vw;
+}
