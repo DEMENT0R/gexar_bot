@@ -2,6 +2,8 @@
 
 <script type="text/javascript">
 $(document).ready(function(){
+  $('#form-onpage #name').focus();
+
   $("#oldfag-button").click(function(){
     $("#page").removeClass();
     $("#dynamic").toggleClass("hidden");
@@ -16,16 +18,15 @@ $(document).ready(function(){
 </div>
 <div class="bot chat-block">
   <p>
-    <b>Test: </b>Привет!<br>
-    <b>Test: </b>Как тебя зовут?
+    <b>Бот </b>...тестовый текст...!
   </p>
   <form class="" action="index.html" method="post">
-    <input type="text" class="bot-chat-input" name="" value=""><br><br>
+    <input type="text" class="bot-chat-input" name="" value="Привет, как дела?" style="text-align: center;"><br><br>
     <button type="button" class="" name="button">Ввод</button>
   </form>
 </div>
 <div class="bot presents">
   <p>Now!</p>
-  <button type="button" name="button">Buy</button>
+  <button type="button" name="button">Купить!</button>
   <p>+5000 | +bonus | +bla-bla</p>
 </div>
