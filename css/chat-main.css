@@ -33,7 +33,7 @@ div {
   top: 0vh;
   right: 0vw;
 }
-@media (max-width: 1000px) {
+@media all and (orientation:portrait) {
   .bot {
     left: 10vw;
     width: 80vw;
