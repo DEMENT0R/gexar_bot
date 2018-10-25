@@ -33,7 +33,7 @@ div {
   top: 0vh;
   right: 0vw;
 }
-@media handheld {
+@media (max-width: 1000px) {
   .bot {
     bottom: 5vmin;
     width: 80vw;
