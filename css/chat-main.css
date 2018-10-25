@@ -47,4 +47,7 @@ div {
   .presents {
     top: 10vh;
   }
+  .bot-chat-input {
+    width: 80vw;
+  }
 }
