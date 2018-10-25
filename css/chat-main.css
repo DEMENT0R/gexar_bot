@@ -33,3 +33,18 @@ div {
   top: 0vh;
   right: 0vw;
 }
+@media handheld {
+  .bot {
+    bottom: 5vmin;
+    width: 80vw;
+  }
+  .chat-block {
+    bottom: 5vh;
+  }
+  .bot-emo {
+    bottom: 50vh;
+  }
+  .presents {
+    top: 10vh;
+  }
+}
