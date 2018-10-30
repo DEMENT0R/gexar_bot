@@ -1,17 +1,44 @@
-<a href="?id=0">Add item</a>
-<table border=1>
-    <tr>
-        <td><b>Name</b></td>
-        <td><b>Car</b></td>
-        <td><b>Sex</b></td>
-        <td><b>Action</b></td>
-    </tr>
-<?php foreach ($LIST as $row): ?>
-    <tr>
-        <td><?=e($row['name'])?></td>
-        <td><?=e($row['car'])?></td>
-        <td><?=e($row['sex'])?></td>
-        <td><a href="?id=<?=e($row['id'])?>">Edit</a></td>
-    </tr>
-<?php endforeach ?>
-</table>
+<div class="container">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <br>
+    <div class="btn-group" role="group" aria-label="...">
+        <a href="/" class="btn btn-default">Главная</a> 
+        <a href="?id=0" class="btn btn-primary">Добавить</a>
+    </div>
+    <hr>
+    <table class="table">
+        <tr>
+            <td><b>Имя</b></td>
+            <td><b>ssid</b></td>
+            <td><b>Пароль</b></td>
+            <td><b>Мыло</b></td>
+            <td><b>Текст</b></td>
+            <td><b>Пол</b></td>
+            <td><b>Обновлено</b></td>
+            <td><b>Действия</b></td>
+        </tr>
+    <?php foreach ($LIST as $row): ?>
+        <tr>
+            <td><?=e($row['name'])?></td>
+            <td><?=e($row['ssid'])?></td>
+            <td><?=e($row['password'])?></td>
+            <td><?=e($row['mail'])?></td>
+            <td><?=e($row['text'])?></td>
+            <td><?=e($row['sex'])?></td>
+            <td><?=e($row['updated'])?></td>
+            <td>
+                
+                <form method="POST">
+                    <input type="hidden" name="delete" value="<?=e($row['id'])?>">
+                    <div class="btn-group" role="group" aria-label="...">
+                    <a href="/" onclick="javascript:void(document.cookie = 'ssid=<?=e($row['ssid'])?>')" class="btn btn-success">Войти</a>
+                    <a href="?id=<?=e($row['id'])?>" class="btn btn-warning">Правка</a>
+                    <input type="submit" value="Удалить!" class="btn btn-danger">
+                    </div>
+                </form>
+            </td>
+        </tr>
+    <?php endforeach ?>
+    </table>
+</div>

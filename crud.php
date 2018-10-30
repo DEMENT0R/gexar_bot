@@ -1,9 +1,13 @@
+<?php 
+    //PHP counter starts:
+    $_start_time = microtime(true); 
+?>
 <?php
 include 'classes/safemysql.class.php';
 
 $db     = new SafeMysql();
 $table  = "users";
-$fields = ['name', 'car', 'sex'];
+$fields = ['name', 'ssid', 'password', 'mail', 'text', 'sex'];
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
@@ -30,8 +34,11 @@ if (!isset($_GET['id']))
         $row = $db->getRow("SELECT * FROM ?n WHERE id=?i", $table, $_GET['id']);
     } else {
         $row['name'] = '';
+        $row['ssid'] = '';
+        $row['password'] = '';
+        $row['mail'] = '';
         $row['sex']  = '';
-        $row['car']  = '';
+        $row['text']  = '';
         $row['id']   = 0;
     }
     include 'form.php';
@@ -43,3 +50,10 @@ function e($str)
 {
    return htmlspecialchars($str, ENT_QUOTES, 'utf-8');
 }
+
+?>
+
+<?php
+    //PHP counter ends:
+    echo '<br><p class="text-center">Время выполнения скрипта: '.(microtime(true) - $_start_time).' сек.</p>';
+?>

@@ -4,6 +4,10 @@ div {
   border: 1px solid black;
 }
 */
+
+html, input, button, a, .bot, .btn {
+  font-size: 2vh;
+}
 .bot {
   position: absolute;
   height: 20vmin;
@@ -11,9 +15,11 @@ div {
   text-align: center;
 }
 .bot-emo {
-  left: 5vw;
-  width: 20vw;
-  background: url("../images/bot.png") no-repeat center bottom / contain;
+  left: 10vw;
+  width: 20vmin;
+  height: 20vmin;
+  position: absolute;
+  bottom: 30vh;
 }
 .chat-block {
   left: 25vw;
@@ -34,9 +40,13 @@ div {
   right: 0vw;
 }
 @media all and (orientation:portrait) {
+  html, input, button, a, .bot, .btn {
+    font-size: 3vh;
+  }
   .bot {
     left: 10vw;
     width: 80vw;
+    height: auto;
   }
   .chat-block {
     bottom: 5vh;
