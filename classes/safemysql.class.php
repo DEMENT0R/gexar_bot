@@ -76,9 +76,9 @@ class SafeMySQL
 
 	protected $defaults = array(
 		'host'      => 'localhost',
-		'user'      => 'gexar_bot',
-		'pass'      => 'mysql',
-		'db'        => 'gexar_bot',
+		'user'      => 'u5055967_gexar_b',
+		'pass'      => '9ehdWi7i7sAW',
+		'db'        => 'u5055967_gexar_bot',
 		'port'      => NULL,
 		'socket'    => NULL,
 		'pconnect'  => FALSE,
