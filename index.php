@@ -1,6 +1,6 @@
-<?php 
+<?php
     //PHP counter starts:
-    $_start_time = microtime(true); 
+    $_start_time = microtime(true);
 ?>
 <html>
     <head>
@@ -18,11 +18,11 @@
       </div>
 <?php
     include 'classes/safemysql.class.php';
-    
+
     $db     = new SafeMysql();
     $table  = "users";
     $fields = ['name', 'ssid', 'password', 'mail', 'text', 'sex', 'updated'];
-    
+
     if ($_COOKIE['ssid'] != '') {
         $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i", $table, $_COOKIE['ssid']);
         $username = $row['name'];
@@ -35,8 +35,7 @@
 ?>
 <div class="bot chat-block">
   <p>
-    <? echo '<b>Debug (<a href="crud.php">db</a>):</b> '; ?>
-    <? echo $debug_msg; ?>
+    <? echo '<b>Debug:</b> '.$debug_msg; ?>
     <b>Бот: </b> Привет, <? echo $username; ?>! О чём поговорим сегодня?
   </p>
   <form class="" action="index.php" method="post">
