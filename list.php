@@ -3,8 +3,9 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
     <br>
     <div class="btn-group" role="group" aria-label="...">
-        <a href="/" class="btn btn-default">Главная</a> 
-        <a href="?id=0" class="btn btn-primary">Добавить</a>
+        <a href="/" class="btn btn-default">Главная</a>
+        <a href="?id=0" class="btn btn-default">Добавить</a>
+        <a href="/" onclick="javascript:void(document.cookie = 'ssid=')" class="btn btn-default">Лог аут</a>
     </div>
     <hr>
     <table class="table">
@@ -28,7 +29,7 @@
             <td><?=e($row['sex'])?></td>
             <td><?=e($row['updated'])?></td>
             <td>
-                
+
                 <form method="POST">
                     <input type="hidden" name="delete" value="<?=e($row['id'])?>">
                     <div class="btn-group" role="group" aria-label="...">
