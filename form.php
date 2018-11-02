@@ -23,7 +23,7 @@
         <br>
         <input type="hidden" name="id" value="<?=e($row['id'])?>"><br>
         <br>
-        <input type="submit" class="btn btn-primary"> <a href="?" class="btn btn-default">Обратно</a><br><br>
+        <input type="submit" value="Сохранить" class="btn btn-primary"> <a href="?" class="btn btn-default">Обратно</a><br><br>
     </form>
     
     <?php if ($row['id']): ?>

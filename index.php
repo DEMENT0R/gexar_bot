@@ -7,7 +7,7 @@
 
     $db     = new SafeMysql();
     $table  = "users";
-    $fields = ['name', 'ssid', 'password', 'mail', 'text', 'sex', 'updated'];
+    $fields = ['id', 'name', 'ssid', 'password', 'mail', 'text', 'sex', 'updated'];
 
     if ($_COOKIE['ssid'] != '') {
         $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i", $table, $_COOKIE['ssid']);
@@ -21,6 +21,7 @@
         $username = 'незнакомец';
         $ssid = generateRandomString(10);
         setcookie("ssid", $ssid, time()+3600*31);
+        $db->query("INSERT INTO ?n SET id=0; ssid=?u", $table, $ssid);
         $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>

@@ -10,6 +10,7 @@
     <hr>
     <table class="table">
         <tr>
+            <td><b>id</b></td>
             <td><b>Имя</b></td>
             <td><b>ssid</b></td>
             <td><b>Пароль</b></td>
@@ -21,6 +22,7 @@
         </tr>
     <?php foreach ($LIST as $row): ?>
         <tr>
+            <td><?=e($row['id'])?></td>
             <td><?=e($row['name'])?></td>
             <td><?=e($row['ssid'])?></td>
             <td><?=e($row['password'])?></td>

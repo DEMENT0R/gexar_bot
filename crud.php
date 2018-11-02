@@ -55,5 +55,5 @@ function e($str)
 
 <?php
     //PHP counter ends:
-    echo '<br><p class="text-center">Время выполнения скрипта: '.(microtime(true) - $_start_time).' сек.</p>';
+    echo '<br><p class="text-center">Сгенерировано за '.(microtime(true) - $_start_time).' сек.</p>';
 ?>
