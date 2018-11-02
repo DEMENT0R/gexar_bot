@@ -30,8 +30,8 @@
         $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
     } else {
         $username = 'незнакомец';
-        generateRandomString(10);
-        $ssid = $_COOKIE['ssid'] = $ssid;
+        $ssid = generateRandomString(10);
+        $_COOKIE['ssid'] = $ssid;
         $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>
