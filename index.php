@@ -30,7 +30,9 @@
         $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
     } else {
         $username = 'незнакомец';
-        $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.generateRandomString(10).')<br>';
+        generateRandomString(10);
+        $ssid = $_COOKIE['ssid'] = $ssid;
+        $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>
 <div class="bot chat-block">
