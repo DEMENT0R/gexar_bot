@@ -37,8 +37,8 @@
     </head>
     <body class="text-center">
       <div class="btn-group" role="group" aria-label="...">
-        <a href="panel/crud.php" class="btn btn-default">Перейти в базу</a>
-        <a href="panel/crud.php?id=0" class="btn btn-default">Добавить юзера</a>
+        <a href="crud.php" class="btn btn-default">Перейти в базу</a>
+        <a href="crud.php?id=0" class="btn btn-default">Добавить юзера</a>
       </div>
 <div class="bot chat-block">
   <p>
