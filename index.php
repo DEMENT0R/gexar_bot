@@ -30,7 +30,7 @@
         $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
     } else {
         $username = 'незнакомец';
-        $debug_msg = 'Новый пользователь! Временный псевдоним <b>незнакомец</b>! (ssid = '.generateRandomString(10).')<br>';
+        $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.generateRandomString(10).')<br>';
     }
 ?>
 <div class="bot chat-block">
@@ -64,7 +64,7 @@ function generateRandomString($length){
 
 <?php
     //PHP counter ends:
-    echo '<br>Время выполнения скрипта: '.(microtime(true) - $_start_time).' сек.';
+    echo '<br>Сгенерировано за '.(microtime(true) - $_start_time).' сек.';
 ?>
 
         <br>
