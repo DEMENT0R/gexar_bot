@@ -32,14 +32,15 @@ setInterval(function(){
   }
   //Общая стоимость
   $total_result = $bot_type + $bot_int + ($staf_quantity * $staf_salary);
-  $pre_total_result = $bot_type + " + " + $bot_int + " + ( " + $staf_quantity + " X " + $staf_salary + " ) = ";
-  $("#total_result").text($pre_total_result + "" + $total_result);
+  $bot_cost = $bot_type + $bot_int;
+  $month_men_cost = $staf_quantity * $staf_salary;
+  //$pre_total_result = $bot_type + " + " + $bot_int + " + ( " + $staf_quantity + " X " + $staf_salary + " ) = ";
+  $("#total_result").html("Разовые траты на бота: " + $bot_cost + " руб.<br>Ежемесячные затраты на ЗП: " + Math.round($month_men_cost) + " руб.");
   //console.log('$total_result: '+$total_result);
   //Окупаемость
-  $bot_cost = $bot_type + $bot_int;
   $men_cost = ($staf_quantity * $staf_salary) / 30;
   $total_profit = $bot_cost / $men_cost;
-  $("#total_profit").html("Дней до полной окупаемости: <b>" + Math.round($total_profit) + ".</b>");
+  $("#total_profit").html("Дней до полной окупаемости: <b>" + Math.round($total_profit) + "</b>!");
   //Прибыль
   $this_year_profit = (365 - $total_profit) * $men_cost;
   $("#this_year_profit").html("Высвобождено средств за текущий год: <b>" + Math.round($this_year_profit) + " руб.</b>");
