@@ -39,6 +39,7 @@
       <div class="btn-group" role="group" aria-label="...">
         <a href="crud.php" class="btn btn-default">Перейти в базу</a>
         <a href="crud.php?id=0" class="btn btn-default">Добавить юзера</a>
+        <a href="calc.html" class="btn btn-default">Ботокалькулятор</a>
       </div>
 <div class="bot chat-block">
   <p>
