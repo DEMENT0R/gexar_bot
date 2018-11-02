@@ -2,20 +2,6 @@
     //PHP counter starts:
     $_start_time = microtime(true);
 ?>
-<html>
-    <head>
-        <title>Tomoru</title>
-        <link rel="shortcut icon" href="https://static.wixstatic.com/media/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png" type="image/png"/>
-        <!-- Bootstrap — Latest compiled and minified CSS -->
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-        <!-- Tomoru styles -->
-        <link rel="stylesheet" href="css/chat-main.css">
-    </head>
-    <body class="text-center">
-      <div class="btn-group" role="group" aria-label="...">
-        <a href="crud.php" class="btn btn-default">Перейти в базу</a>
-        <a href="crud.php?id=0" class="btn btn-default">Добавить юзера</a>
-      </div>
 <?php
     include 'classes/safemysql.class.php';
 
@@ -35,6 +21,20 @@
         $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>
+<html>
+    <head>
+        <title>Tomoru</title>
+        <link rel="shortcut icon" href="https://static.wixstatic.com/media/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png" type="image/png"/>
+        <!-- Bootstrap — Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <!-- Tomoru styles -->
+        <link rel="stylesheet" href="css/chat-main.css">
+    </head>
+    <body class="text-center">
+      <div class="btn-group" role="group" aria-label="...">
+        <a href="crud.php" class="btn btn-default">Перейти в базу</a>
+        <a href="crud.php?id=0" class="btn btn-default">Добавить юзера</a>
+      </div>
 <div class="bot chat-block">
   <p>
     <? echo '<b>Debug:</b> '.$debug_msg; ?>
