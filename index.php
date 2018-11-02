@@ -21,7 +21,7 @@
         $username = 'незнакомец';
         $ssid = generateRandomString(10);
         setcookie("ssid", $ssid, time()+3600*31);
-        $db->query("INSERT INTO ?n SET id='0', ssid='?u'", $table, $ssid);
+        $db->query("INSERT INTO ?n SET id=0, ssid=?u", $table, $ssid);
         $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>
