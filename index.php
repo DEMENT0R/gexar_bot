@@ -31,7 +31,7 @@
     } else {
         $username = 'незнакомец';
         $ssid = generateRandomString(10);
-        $_COOKIE['ssid'] = $ssid;
+        setcookie("ssid", $ssid, time()+3600*31);
         $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
     }
 ?>
