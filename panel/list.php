@@ -5,7 +5,7 @@
     <div class="btn-group" role="group" aria-label="...">
         <a href="/" class="btn btn-default">Главная</a>
         <a href="?id=0" class="btn btn-default">Добавить</a>
-        <a href="/" onclick="javascript:void(document.cookie = 'ssid=')" class="btn btn-default">Лог аут</a>
+        <a href="/" onclick="javascript:void(document.cookie = 'ssid=');" class="btn btn-default">Лог аут</a>
     </div>
     <hr>
     <table class="table">
