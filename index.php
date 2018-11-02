@@ -13,7 +13,7 @@
         $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i", $table, $_COOKIE['ssid']);
         $username = $row['name'];
         if ($username =='') {
-          $username = 'друг'
+          $username = 'друг';
         }
         $last_time = $row['updated'];
         $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
