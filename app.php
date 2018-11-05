@@ -23,7 +23,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		//sending messages//
 		////////////////////
 		$db->query("INSERT INTO ?n SET ?u", $table, $data);
-		//echo 'SEND MESSAGE = '.$_POST['send_message'];
+		//echo 'SEND MESSAGE = '.$_POST;
 	}
 	header("Location: http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 	exit;

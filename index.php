@@ -54,10 +54,8 @@ if ($_COOKIE['ssid'] != '') {
       //include 'app.php?get_message=3'; ?>
     </div>
     <div id="chat-input">
-      <form class="" action="app.php" method="post">
         <input type="text" class="bot-chat-input" name="text" id="chat-input-field" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center;"><br><br>
         <button type="button" class="btn btn-primary" name="button" id="send-message">Ввод</button>
-      </form>
     </div>
   </div>
 
