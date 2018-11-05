@@ -15,25 +15,29 @@ $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
 	$data = $db->filterArray($_POST, $fields);
-	if (isset($_POST['get_message']))
+	if (isset($_POST['_get_message']))
 	{
 		$db->query("SELECT FROM ?n WHERE id=?i", $table, $_POST['get_message']);
 	} elseif ($_POST['send_message']) {
-		$db->query("INSERT INTO ?n SET ?u WHERE id = ?i", $table, $data, $_POST['send_message']);
-	} else {
-		echo "Oops!";
+		////////////////////
+		//sending messages//
+		////////////////////
+		$db->query("INSERT INTO ?n SET ?u", $table, $data);
+		//echo 'SEND MESSAGE = '.$_POST['send_message'];
 	}
 	header("Location: http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 	exit;
 } else {
 	//echo "<h1>Not POST method!!!</h1>";
 }
-
+////////////////////
+//getting messages//
+////////////////////
 if ($_GET['get_message'] > 0 ) {
 	$mess_quantity = $_GET['get_message'];
 	if ($_COOKIE['ssid'] != '') {
 		//$row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i ORDER BY updated DESC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
-		$LIST = $db->getAll("SELECT * FROM ?n WHERE ssid=?i ORDER BY updated DESC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
+		$LIST = $db->getAll("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
 		$LIST = array_reverse($LIST);
 		foreach ($LIST as $row) {
 			$username = $row['name'];
@@ -46,9 +50,10 @@ if ($_GET['get_message'] > 0 ) {
 			echo "<b>".$username."</b>: ".$text."<br>";
 		}
 	} else {
-		echo "Oops!";
+		echo "<b>Tomoru:</b> Т.к. сообщений ещё нет, выводим... Привет, друг!";
 	}
 }
+
 ?>
 <?php
 //PHP counter ends:

@@ -10,11 +10,12 @@ $table  = "users";
 $fields = ['id', 'name', 'ssid', 'password', 'mail', 'text', 'sex', 'updated'];
 
 if ($_COOKIE['ssid'] != '') {
-  $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i", $table, $_COOKIE['ssid']);
+  $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s", $table, $_COOKIE['ssid']);
   $username = $row['name'];
   if ($username =='') {
     $username = 'друг';
   }
+  setcookie("user_name", $username, time()+3600*31);
   $last_time = $row['updated'];
   $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
 } else {
@@ -22,7 +23,7 @@ if ($_COOKIE['ssid'] != '') {
   $ssid = generateRandomString(10);
   setcookie("ssid", $ssid, time()+3600*31);
   //$db->query("INSERT INTO `?n` SET `ssid`=?u", $table, $ssid);
-  $db->query("INSERT INTO `".$table."` SET `ssid`=".$ssid.";");
+  $db->query("INSERT INTO `".$table."` SET ssid='".$ssid."'");
   $debug_msg = 'Новый пользователь! Псевдоним <b>'.$username.'</b>! (ssid = '.$ssid.')<br>';
 }
 ?>
@@ -52,9 +53,9 @@ if ($_COOKIE['ssid'] != '') {
       //include 'app.php?get_message=3'; ?>
     </div>
     <div id="chat-input">
-      <form class="" action="index.php" method="post">
-        <input type="text" class="bot-chat-input" name="" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center;"><br><br>
-        <button type="button" class="btn btn-primary" name="button">Ввод</button>
+      <form class="" action="app.php" method="post">
+        <input type="text" class="bot-chat-input" name="text" id="chat-input-field" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center;"><br><br>
+        <button type="button" class="btn btn-primary" name="button" id="send-message">Ввод</button>
       </form>
     </div>
   </div>
@@ -63,7 +64,7 @@ if ($_COOKIE['ssid'] != '') {
   //functions
 
   function generateRandomString($length){
-    $chars = '1234567890';
+    $chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz1234567890';
     $numChars = strlen($chars);
     $string = '';
     for ($i = 0; $i < $length; $i++) {
@@ -84,4 +85,4 @@ echo '<br>Сгенерировано за '.(microtime(true) - $_start_time).' �
 
 <br>
 <script src="js/bot-emo.js"></script>
-<script src="js/chat-updater.js"></script>
+<script src="js/chat.js"></script>
