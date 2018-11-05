@@ -33,7 +33,8 @@ if ($_GET['get_message'] > 0 ) {
 	$mess_quantity = $_GET['get_message'];
 	if ($_COOKIE['ssid'] != '') {
 		//$row = $db->getRow("SELECT * FROM ?n WHERE ssid=?i ORDER BY updated DESC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
-		$LIST = $db->getAll("SELECT * FROM ?n WHERE ssid=?i ORDER BY updated ASC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
+		$LIST = $db->getAll("SELECT * FROM ?n WHERE ssid=?i ORDER BY updated DESC LIMIT 0, $mess_quantity", $table, $_COOKIE['ssid']);
+		$LIST = array_reverse($LIST);
 		foreach ($LIST as $row) {
 			$username = $row['name'];
 			$text = $row['text'];
