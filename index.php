@@ -39,9 +39,9 @@ if ($_COOKIE['ssid'] != '') {
 </head>
 <body class="text-center">
   <div class="btn-group" role="group" aria-label="...">
-    <a href="crud.php" class="btn btn-default">Перейти в базу</a>
-    <a href="crud.php?id=0" class="btn btn-default">Добавить юзера</a>
-    <a href="calc.html" class="btn btn-default">Ботокалькулятор</a>
+    <a href="crud.php" class="btn btn-default">База</a>
+    <a href="crud.php?id=0" class="btn btn-default">Юзер</a>
+    <a href="calc.html" class="btn btn-default">Calc</a>
   </div>
   <div class="bot chat-block">
     <div id="chat-history">
