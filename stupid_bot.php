@@ -4,11 +4,11 @@ $_start_time = microtime(true);
 ?>
 <?php
 
-global $ssid = "C1k5fbviTa";
+$ssid = "C1k5fbviTa";
 
 include 'classes/safemysql.class.php';
-global $db     = new SafeMysql();
-global $table  = "chats";
+$db     = new SafeMysql();
+$table  = "chats";
 $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 
 $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $ssid);
@@ -44,7 +44,7 @@ if ($text){
 //functions
 //sending message
 function sendingMessage($text){
-	//global $table, $ssid;
+	global $table, $ssid;
 	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	exit("Конец!");
