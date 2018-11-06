@@ -13,13 +13,13 @@ if ($_COOKIE['ssid'] != '') {
   $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s", $table, $_COOKIE['ssid']);
   $username = $row['name'];
   if ($username =='') {
-    $username = 'друг';
+    $username = 'friend';
   }
   setcookie("user_name", $username, time()+3600*31);
   $last_time = $row['updated'];
   $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
 } else {
-  $username = 'незнакомец';
+  $username = 'unknown user';
   $ssid = generateRandomString(10);
   setcookie("ssid", $ssid, time()+3600*31);
   //$db->query("INSERT INTO `?n` SET `ssid`=?u", $table, $ssid);
