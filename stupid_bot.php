@@ -22,7 +22,8 @@ if ($username == 'StupidBot') {
 if (((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай') or (strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай'))) {
 	$text = "Приветствую!"
 	//sendingMessage($text);
-	$db->query("INSERT INTO ?n SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'", $table);
+	$db->query("INSERT INTO `".$table."` SET ssid='".$ssid."'");
+	//$db->query("INSERT INTO ?n SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'", $table);
 }
 
 
