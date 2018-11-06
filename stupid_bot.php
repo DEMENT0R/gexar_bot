@@ -24,8 +24,8 @@ echo "text = ".$text;
 if ($text == 'Привет') {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
-	//$db->query("INSERT INTO ".$table." SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'");
-	sendingMessage($text);
+	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
+	//sendingMessage($text);
 } else if ($text == 'Пока'){
 	$text = "До связи!!";
 	sendingMessage($text);
