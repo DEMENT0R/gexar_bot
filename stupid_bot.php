@@ -19,10 +19,10 @@ if ($username == 'StupidBot') {
 	exit("Ответ уже написан ботом!");
 }
 
-if (((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай') or (strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай'))) {
+if ((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай')) or (strpos($text, 'привет')) or (strpos($text, 'здравствуй')) or (strpos($text, 'хай'))) {
 	$text = "Приветствую!"
-	//sendingMessage($text);
-	$db->query("INSERT INTO `".$table."` SET ssid='".$ssid."'");
+	sendingMessage($text);
+	//$db->query("INSERT INTO `".$table."` SET ssid='".$ssid."'");
 	//$db->query("INSERT INTO ?n SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'", $table);
 }
 
