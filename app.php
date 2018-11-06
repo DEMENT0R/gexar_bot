@@ -56,5 +56,5 @@ if ($_GET['get_message'] > 0 ) {
 ?>
 <?php
 //PHP counter ends:
-echo '<p class="text-center" style="color: #ccc;">Сгенерировано за '.round((microtime(true) - $_start_time), 5).' сек.</p>';
+echo '<!-- ЧАТ: Сгенерировано за '.round((microtime(true) - $_start_time), 5).' сек. -->';
 ?>

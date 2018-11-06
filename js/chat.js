@@ -24,7 +24,7 @@ $("#chat-input-field").keyup(function(event){
 // FUNCTIONS
 //update function
 function UpdateMessages(){
-  $('#chat-history').load('app.php?get_message=4');
+  $('#chat-history').load('app.php?get_message=2');
 }
 
 //AJAX POST DEBUG
