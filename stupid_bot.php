@@ -14,29 +14,27 @@ for ($i = 0; $i < 60; $i++){
 
 	$username = $row['name'];
 	$text = $row['text'];
-	if ($username == 'StupidBot') {
-		exit("Ответ уже написан ботом!");
+	if ($username != 'StupidBot') {
+		if ($text == 'Привет') {
+			$text = "Приветствую!";
+			echo "Приветствие обнаружено! Отвечаю!";
+			sendingMessage($text);
+		} else if ($text == 'Пока'){
+			$text = "До связи!!";
+			sendingMessage($text);
+		} else if ($text == 'Кто ты?'){
+			$text = "Меня зовут Tomoru";
+			sendingMessage($text);
+		} else if ($text == 'Анекдот'){
+			$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
+			sendingMessage($text);
+		} else if ($text == 'help'){
+			$text = "Мне известны тольско следующие слова: Привет, Пока, Кто ты?, Анекдот, help";
+			sendingMessage($text);
+		}
 	}
 
 	echo "text = ".$text;
-
-	if ($text == 'Привет') {
-		$text = "Приветствую!";
-		echo "Приветствие обнаружено! Отвечаю!";
-		sendingMessage($text);
-	} else if ($text == 'Пока'){
-		$text = "До связи!!";
-		sendingMessage($text);
-	} else if ($text == 'Кто ты?'){
-		$text = "Меня зовут Tomoru";
-		sendingMessage($text);
-	} else if ($text == 'Анекдот'){
-		$text = "Из письма в газету: `У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца? `";
-		sendingMessage($text);
-	} else if ($text == 'help'){
-		$text = "Мне известны тольско следующие слова: Привет, Пока, Кто ты?, Анекдот";
-		sendingMessage($text);
-	}
 
 	sleep (1);
 }
