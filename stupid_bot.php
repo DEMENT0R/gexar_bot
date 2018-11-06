@@ -1,8 +1,6 @@
 <?php
-//PHP counter starts:
-$_start_time = microtime(true);
-?>
-<?php
+
+for ($i = 0; i < 60; i++){echo "."; sleep 1;}
 
 $ssid = "C1k5fbviTa";
 
@@ -24,20 +22,20 @@ echo "text = ".$text;
 if ($text == 'Привет') {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
-	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
-	//sendingMessage($text);
-	exit("Конец!");
+	sendingMessage($text);
 } else if ($text == 'Пока'){
 	$text = "До связи!!";
 	sendingMessage($text);
-} else if ($text == 'Кто ты?'){
-	$text = "До связи!!";
+} else if ($text == 'Кто ты'){
+	$text = "Меня зовут Tomoru";
+	sendingMessage($text);
+} else if ($text == 'Анекдот'){
+	$text = "Из письма в газету: `У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца? `";
 	sendingMessage($text);
 }
 
-
 if ($text){
-	$text = "Не понимаю...";
+	$text = "Не понимаю... Мне известны тольско следующие слова: Привет, Пока, Кто ты, Анекдот";
 	sendingMessage($text);
 }
 
@@ -45,7 +43,6 @@ if ($text){
 //sending message
 function sendingMessage($text){
 	global $db, $table, $ssid;
-	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	exit("Конец!");
 }
@@ -54,8 +51,4 @@ function test(){
 	//test
 }
 
-?>
-<?php
-//PHP counter ends:
-echo '<br>Сгенерировано за '.(microtime(true) - $_start_time).' сек.';
 ?>
