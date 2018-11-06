@@ -2,7 +2,7 @@
 
 for ($i = 0; $i < 10; $i++){
 	echo $i; 
-	sleep 1;
+	sleep (1);
 }
 
 $ssid = "C1k5fbviTa";
