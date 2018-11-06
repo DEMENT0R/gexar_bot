@@ -33,9 +33,7 @@ for ($i = 0; $i < 60; $i++){
 	} else if ($text == 'Анекдот'){
 		$text = "Из письма в газету: `У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца? `";
 		sendingMessage($text);
-	}
-
-	if ($text){
+	} else if ($text){
 		$text = "Не понимаю... Мне известны тольско следующие слова: Привет, Пока, Кто ты, Анекдот";
 		sendingMessage($text);
 	}
@@ -45,7 +43,7 @@ for ($i = 0; $i < 60; $i++){
 	function sendingMessage($text){
 		global $db, $table, $ssid;
 		$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
-		exit("Конец!");
+		//exit("Конец!");
 	}
 
 	function test(){
