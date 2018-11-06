@@ -21,27 +21,30 @@ if ($username == 'StupidBot') {
 
 echo "text = ".$text;
 
-if (strpos($text, 'Привет') == true ) {
+if ($text == 'Привет') {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
 	sendingMessage($text);
-} else if (strpos($text, 'Привет')){
+} else if ($text == 'Пока'){
 	$text = "До связи!!";
-	echo "Прощание обнаружено! Отвечаю!";
+	sendingMessage($text);
+} else if ($text == 'Кто ты?'){
+	$text = "До связи!!";
 	sendingMessage($text);
 }
 
-/*
+
 if ($text){
-	echo "text = ".$text;
+	$text = "Не понимаю...";
+	sendingMessage($text);
 }
-*/
 
 //functions
 //sending message
 function sendingMessage($text){
 	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ?n SET ssid='$ssid' name='Stupid Bot' text='$text'", $table);
+	exit("Конец!");
 }
 
 function test(){
