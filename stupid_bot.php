@@ -21,21 +21,21 @@ if ($username == 'StupidBot') {
 
 echo "text = ".$text;
 
-if ((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай')) or (strpos($text, 'привет')) or (strpos($text, 'здравствуй')) or (strpos($text, 'хай'))) {
+if (strpos($text, 'Привет') == true ) {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
 	sendingMessage($text);
-	//$db->query("INSERT INTO `".$table."` SET ssid='".$ssid."'");
-	//$db->query("INSERT INTO ?n SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'", $table);
 } else if (strpos($text, 'Привет')){
 	$text = "До связи!!";
 	echo "Прощание обнаружено! Отвечаю!";
 	sendingMessage($text);
 }
 
-//if ($text){
+/*
+if ($text){
 	echo "text = ".$text;
-//}
+}
+*/
 
 //functions
 //sending message
