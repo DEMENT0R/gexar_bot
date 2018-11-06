@@ -1,6 +1,9 @@
 <?php
 
-for ($i = 0; i < 60; i++){echo "."; sleep 1;}
+for ($i = 0; i < 10; i++){
+	echo $i; 
+	sleep 1;
+}
 
 $ssid = "C1k5fbviTa";
 
