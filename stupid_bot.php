@@ -4,11 +4,11 @@ $_start_time = microtime(true);
 ?>
 <?php
 
-$ssid = "C1k5fbviTa";
+global $ssid = "C1k5fbviTa";
 
 include 'classes/safemysql.class.php';
-$db     = new SafeMysql();
-$table  = "chats";
+global $db     = new SafeMysql();
+global $table  = "chats";
 $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 
 $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $ssid);
@@ -29,7 +29,7 @@ if ($text == 'Привет') {
 	exit("Конец!");
 } else if ($text == 'Пока'){
 	$text = "До связи!!";
-	sendingMessage($table, $ssid, $text);
+	sendingMessage($text);
 } else if ($text == 'Кто ты?'){
 	$text = "До связи!!";
 	sendingMessage($text);
@@ -43,7 +43,7 @@ if ($text){
 
 //functions
 //sending message
-function sendingMessage($table, $ssid, $text){
+function sendingMessage($text){
 	//global $table, $ssid;
 	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
