@@ -19,6 +19,8 @@ if ($username == 'StupidBot') {
 	exit("Ответ уже написан ботом!");
 }
 
+echo "text = ".$text;
+
 if ((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) or (strpos($text, 'Хай')) or (strpos($text, 'привет')) or (strpos($text, 'здравствуй')) or (strpos($text, 'хай'))) {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
@@ -31,6 +33,9 @@ if ((strpos($text, 'Привет')) or (strpos($text, 'Здравствуй')) o
 	sendingMessage($text);
 }
 
+//if ($text){
+	echo "text = ".$text;
+//}
 
 //functions
 //sending message
