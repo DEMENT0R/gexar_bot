@@ -24,24 +24,26 @@ echo "text = ".$text;
 if ($text == 'Привет') {
 	$text = "Приветствую!";
 	echo "Приветствие обнаружено! Отвечаю!";
-	sendingMessage($table, $ssid, $text);
+	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'");
+	//sendingMessage($text);
 } else if ($text == 'Пока'){
 	$text = "До связи!!";
-	sendingMessage($table, $ssid, $text);
+	sendingMessage($text);
 } else if ($text == 'Кто ты?'){
 	$text = "До связи!!";
-	sendingMessage($table, $ssid, $text);
+	sendingMessage($text);
 }
 
 
 if ($text){
 	$text = "Не понимаю...";
-	sendingMessage($table, $ssid, $text);
+	sendingMessage($text);
 }
 
 //functions
 //sending message
-function sendingMessage($table, $ssid, $text){
+function sendingMessage($text){
+	global $table, $ssid;
 	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'");
 	exit("Конец!");
