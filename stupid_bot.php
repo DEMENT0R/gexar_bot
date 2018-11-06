@@ -29,7 +29,7 @@ if ($text == 'Привет') {
 	exit("Конец!");
 } else if ($text == 'Пока'){
 	$text = "До связи!!";
-	sendingMessage($text);
+	sendingMessage($table, $ssid, $text);
 } else if ($text == 'Кто ты?'){
 	$text = "До связи!!";
 	sendingMessage($text);
@@ -43,8 +43,8 @@ if ($text){
 
 //functions
 //sending message
-function sendingMessage($text){
-	global $table, $ssid;
+function sendingMessage($table, $ssid, $text){
+	//global $table, $ssid;
 	//INSERT INTO table SET a=1, b=2, c=3
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	exit("Конец!");
