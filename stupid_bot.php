@@ -23,13 +23,16 @@ for ($i = 0; $i < 60; $i++){
 			$text = "До связи!!";
 			sendingMessage($text);
 		} else if ($text == 'Кто ты?'){
-			$text = "Меня зовут Tomoru";
+			$text = "StupidBot";
+			sendingMessage($text);
+		} else if ($text == 'Что ты умеешь?'){
+			$text = "А нихрена не умею!";
 			sendingMessage($text);
 		} else if ($text == 'Анекдот'){
 			$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
 			sendingMessage($text);
 		} else if ($text == 'help'){
-			$text = "Мне известны тольско следующие слова: Привет, Пока, Кто ты?, Анекдот, help";
+			$text = "Мне известны тольско следующие слова: Привет, Пока, Кто ты?, Что ты умеешь?, Анекдот, help";
 			sendingMessage($text);
 		}
 	}
