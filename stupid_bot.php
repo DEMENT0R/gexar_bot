@@ -45,7 +45,7 @@ if ($text){
 function sendingMessage($text){
 	global $table, $ssid;
 	//INSERT INTO table SET a=1, b=2, c=3
-	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."' name='Stupid Bot' text='".$text."'");
+	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	exit("Конец!");
 }
 
