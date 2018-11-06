@@ -38,18 +38,19 @@ for ($i = 0; $i < 60; $i++){
 		sendingMessage($text);
 	}
 
-//functions
-//sending message
-	function sendingMessage($text){
-		global $db, $table, $ssid;
-		$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
-		//exit("Конец!");
-	}
-
-	function test(){
-	//test
-	}
-
 	sleep (1);
 }
+
+//functions
+//sending message
+function sendingMessage($text){
+	global $db, $table, $ssid;
+	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
+	//exit("Конец!");
+}
+
+function test(){
+	//test
+}
+
 ?>
