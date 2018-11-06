@@ -4,7 +4,6 @@ $_start_time = microtime(true);
 ?>
 <?php
 
-$isAuth = false;
 $ssid = "";
 
 include 'classes/safemysql.class.php';
