@@ -47,8 +47,7 @@ if ($_COOKIE['ssid'] != '') {
   </div>
   <div class="bot chat-block">
     <div id="chat-history">
-      <? echo '<b>Debug:</b> '.$debug_msg; ?>
-      <b>Бот: </b> Привет, <? echo $username; ?>! О чём поговорим сегодня?
+      ...
 
       <?php //Sterting include
       //include 'app.php?get_message=3'; ?>
