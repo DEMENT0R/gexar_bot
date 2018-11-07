@@ -1,14 +1,14 @@
 <?php
 
+$ssid = "C1k5fbviTa";
+
+include 'classes/safemysql.class.php';
+$db     = new SafeMysql();
+$table  = "chats";
+$fields = ['id', 'ssid', 'name', 'text', 'updated'];
+
 for ($i = 0; $i < 10; $i++){
 	//echo $i; 
-
-	$ssid = "C1k5fbviTa";
-
-	include 'classes/safemysql.class.php';
-	$db     = new SafeMysql();
-	$table  = "chats";
-	$fields = ['id', 'ssid', 'name', 'text', 'updated'];
 
 	$row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $ssid);
 
