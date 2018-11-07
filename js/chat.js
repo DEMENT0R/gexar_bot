@@ -50,18 +50,20 @@ function get_cookie ( cookie_name )
 
 //send message
 function sendMessage(){
-  $.post(
-    "app.php",
-    {
-      send_message: "1",
-      id: 0,
-      ssid: get_cookie ( "ssid" ),
-      name: get_cookie ( "user_name" ),
-      text: $('#chat-input-field').val(),
+  if ($('#chat-input-field').val()) {
+    $.post(
+      "app.php",
+      {
+        send_message: "1",
+        id: 0,
+        ssid: get_cookie ( "ssid" ),
+        name: get_cookie ( "user_name" ),
+        text: $('#chat-input-field').val(),
       //updated: ''
     },
     onAjaxSuccess //debug
-  );
+    );
 
-  $('#chat-input-field').val('');
+    $('#chat-input-field').val('');
+  }
 }
