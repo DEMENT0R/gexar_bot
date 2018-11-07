@@ -19,13 +19,13 @@ if ($username != 'Stupid Bot') {
 	if ((strpos($text, 'gexar') !== false) or (strpos($text, 'гексар') !== false)) {
 		$text = "Дааа, насчёт AR/VR — это в GEXAR!";
 		sendingMessage($text);
-	} else if ((strpos($text, 'прив') !== false) or (strpos($text, 'здравств]') !== false)) {
+	} else if ((strpos($text, 'прив') !== false) or (strpos($text, 'здравств') !== false)) {
 		$text = "Приветствую!";
 		sendingMessage($text);
-	} else if ((strpos($text, 'пока') !== false) or (strpos($text, 'прощай]') !== false)) {
+	} else if ((strpos($text, 'пока') !== false) or (strpos($text, 'прощай') !== false)) {
 		$text = "До связи!!";
 		sendingMessage($text);
-	} else if ((strpos($text, 'stupid') !== false) or (strpos($text, 'тупой]') !== false)) {
+	} else if ((strpos($text, 'stupid') !== false) or (strpos($text, 'тупой') !== false)) {
 		$text = "Мне приятно, когда меня называют по имени! :)";
 		sendingMessage($text);
 	} else if ((strpos($text, 'кто') !== false) or (strpos($text, 'бот') !== false) or (strpos($text, 'имя') !== false) or (strpos($text, 'зовут') !== false)) {
