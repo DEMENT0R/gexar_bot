@@ -1,5 +1,7 @@
 <?php
 
+sleep(2);
+
 $ssid = "C1k5fbviTa";
 
 include 'classes/safemysql.class.php';
