@@ -22,23 +22,23 @@ for ($i = 0; $i < 10; $i++){
 		if (strpos($text, 'gexar') !== false) {
 			$text = "Дааа, насчёт AR/VR — это в GEXAR!";
 			sendingMessage($text);
-		} else if ($text == 'привет') {
+		} else if (strpos($text, 'привет') !== false) {
 			$text = "Приветствую!";
 			sendingMessage($text);
-		} else if ($text == 'пока'){
+		} else if (strpos($text, 'пока') !== false) {
 			$text = "До связи!!";
 			sendingMessage($text);
-		} else if ($text == 'кто ты?'){
+		} else if (strpos($text, 'кто ты') !== false) {
 			$text = "StupidBot";
 			sendingMessage($text);
-		} else if ($text == 'что ты умеешь?'){
+		} else if (strpos($text, 'умеешь') !== false) {
 			$text = "А нихрена не умею!";
 			sendingMessage($text);
-		} else if ($text == 'анекдот'){
+		} else if (strpos($text, 'анекдот') !== false) {
 			$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
 			sendingMessage($text);
-		} else if ($text == 'help'){
-			$text = "Мне известны только следующие слова: Привет, Пока, Кто ты?, Что ты умеешь?, Анекдот, help";
+		} else if (strpos($text, 'help') !== false) {
+			$text = "Мне известны только следующие слова: привет,пока, кто ты, умеешь, анекдот, help";
 			sendingMessage($text);
 		}
 	} else {
