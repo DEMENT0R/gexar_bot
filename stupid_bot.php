@@ -38,7 +38,7 @@ for ($i = 0; $i < 10; $i++){
 			sendingMessage($text);
 		}
 	} else {
-		echo "text(".$username.") = Самому себе не отвечаем!";
+		echo "text(".$username.") = Самому себе не отвечаем!<br>";
 	}
 
 	
