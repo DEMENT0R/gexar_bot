@@ -90,6 +90,7 @@ html, input, button, a, .bot, .btn {
   #chat-input {
     position: fixed;
     left: 10vw;
+    font-size: 3vw;
     bottom: 3vh;
   }
 }
