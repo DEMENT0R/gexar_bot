@@ -31,9 +31,12 @@ if ($username != 'Stupid Bot') {
 		$text = "Мне приятно, когда меня называют по имени! :)";
 		sendingMessage($text);
 	} else if ((strpos($text, 'кто') !== false) or (strpos($text, 'бот') !== false) or (strpos($text, 'имя') !== false) or (strpos($text, 'зовут') !== false)) {
-		$text = "Я не просто бот, я — Stupid Bot! Думаешь, чтоит переводить? Я думаю — нет!";
+		$text = "Я не просто бот, я — Stupid Bot! Думаешь, стоит переводить? Я думаю — нет!";
 		sendingMessage($text);
-	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false) or (strpos($text, 'дел') !== false)) {
+	} else if ((strpos($text, 'беси') !== false) or (strpos($text, 'пись') !== false) or (strpos($text, 'жоп') !== false)) {
+		$text = "Не бесись-ка! ;)";
+		sendingMessage($text);
+	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false) or (strpos($text, 'можешь') !== false)) {
 		$text = "А нихрена не умею!";
 		sendingMessage($text);
 	} else if (strpos($text, 'анекдот') !== false) {
