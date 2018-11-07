@@ -96,4 +96,8 @@ html, input, button, a, .bot, .btn {
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 5vw;
   }
+
+  .btn {
+    font-size: 5vw;
+  }
 }
