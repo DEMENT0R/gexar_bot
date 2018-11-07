@@ -85,7 +85,7 @@ html, input, button, a, .bot, .btn {
     overflow: hidden;
     text-align: left;
     font-size: 5vw;
-    bottom: 28vh;
+    bottom: 20vh;
   }
   #chat-input {
     position: fixed;
