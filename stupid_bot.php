@@ -54,8 +54,4 @@ function sendingMessage($text){
 	//exit("Конец!");
 }
 
-function test(){
-	//test
-}
-
 ?>
