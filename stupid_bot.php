@@ -48,9 +48,11 @@ if ($username != 'Stupid Bot') {
 	} else if ((strpos($text, 'help') !== false) or (strpos($text, 'хелп') !== false)) {
 		$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто/бот/имя/зовут, умеешь/знаешь/делаешь, анекдот, help/хелп";
 		sendingMessage($text);
+		/*
 	} else if ((strpos($text, 'music') !== false) or (strpos($text, 'музык') !== false)) {
 		$text = "Netsky - No Strings Attached <span class='btn btn-info' onclick='musicPlay()'>Play</span><span class='btn btn-info' onclick='musicStop()'>Stop</span>";
 		sendingMessage($text);
+		*/
 	} else {
 		$text = "Моя твоя не понимать! Набери <b>help</b> и нажми Enter!";
 		sendingMessage($text);
@@ -64,6 +66,7 @@ if ($username != 'Stupid Bot') {
 function sendingMessage($text){
 	global $db, $table, $ssid;
 	echo "bot_text = ".$text."<br>";
+	//if ((strpos($text, "'") !== false) {$text}
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	//exit("Конец!");
 }
