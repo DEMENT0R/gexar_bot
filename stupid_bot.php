@@ -48,7 +48,7 @@ if ($username != 'Stupid Bot') {
 	} else if ((strpos($text, 'help') !== false) or (strpos($text, 'хелп') !== false)) {
 		$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто/бот/имя/зовут, умеешь/знаешь/делаешь, анекдот, help/хелп";
 		sendingMessage($text);
-	 else if ((strpos($text, 'music') !== false) or (strpos($text, 'музык') !== false)) {
+	} else if ((strpos($text, 'music') !== false) or (strpos($text, 'музык') !== false)) {
 		$text = "Netsky - No Strings Attached <span class='btn btn-info' onclick='musicPlay()'>Play</span><span class='btn btn-info' onclick='musicStop()'>Stop</span>";
 		sendingMessage($text);
 	} else {
