@@ -65,5 +65,7 @@ function sendMessage(){
     );
 
     $('#chat-input-field').val('');
+  } else {
+    $('#chat-input-field').attr("placeholder", "Введите сообщение для бота");
   }
 }
