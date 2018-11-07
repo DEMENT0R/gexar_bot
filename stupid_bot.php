@@ -37,6 +37,12 @@ if ($username != 'Stupid Bot') {
 	} else if (strpos($text, 'анекдот') !== false) {
 		$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
 		sendingMessage($text);
+	} else if (strpos($text, '?') !== false) {
+		$text = "Я не понял твой вопрос :( Посмотри на моё имя!";
+		sendingMessage($text);
+	} else if (strpos($text, '!') !== false) {
+		$text = "НЕ КРИЧИ НА МЕНЯ!!!1!11адын %-)";
+		sendingMessage($text);
 	} else if (strpos($text, 'help') !== false) {
 		$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто/бот, умеешь/знаешь, анекдот, help";
 		sendingMessage($text);
