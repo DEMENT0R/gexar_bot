@@ -15,12 +15,11 @@ for ($i = 0; $i < 10; $i++){
 	$username = $row['name'];
 	$text = $row['text'];
 	$text = mb_strtolower($text);
-	echo "text = ".$text."<br>";
+	echo "text(".$username.") = ".$text."<br>";
 
-	if ($username != 'StupidBot') {
+	if ($username != 'Stupid Bot') {
 		if ($text == 'привет') {
 			$text = "Приветствую!";
-			echo "Приветствие обнаружено! Отвечаю!";
 			sendingMessage($text);
 		} else if ($text == 'пока'){
 			$text = "До связи!!";
