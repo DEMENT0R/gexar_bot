@@ -4,6 +4,10 @@ div {
   border: 1px solid black;
 }
 */
+body {
+  width: 100vw;
+  height: 100vh;
+}
 
 html, input, button, a, .bot, .btn {
   font-size: 2vh;
