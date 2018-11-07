@@ -13,7 +13,8 @@ for ($i = 0; $i < 10; $i++){
 	$row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $ssid);
 
 	$username = $row['name'];
-	$text = strtolower($row['text']);
+	$text = $row['text'];
+	$text = strtolower($text);
 	echo "text = ".$text."<br>";
 
 	if ($username != 'StupidBot') {
