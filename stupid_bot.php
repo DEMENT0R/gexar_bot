@@ -29,7 +29,7 @@ if ($username != 'Stupid Bot') {
 		$text = "Мне приятно, когда меня называют по имени! :)";
 		sendingMessage($text);
 	} else if ((strpos($text, 'кто') !== false) or (strpos($text, 'бот') !== false) or (strpos($text, 'имя') !== false) or (strpos($text, 'зовут') !== false)) {
-		$text = "Я не просто бот, я — Stupid Bot!";
+		$text = "Я не просто бот, я — Stupid Bot! Думаешь, чтоит переводить? Я думаю — нет!";
 		sendingMessage($text);
 	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false) or (strpos($text, 'дел') !== false)) {
 		$text = "А нихрена не умею!";
