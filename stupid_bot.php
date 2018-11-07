@@ -31,7 +31,7 @@ if ($username != 'Stupid Bot') {
 	} else if ((strpos($text, 'кто') !== false) or (strpos($text, 'бот') !== false)) {
 		$text = "Я не просто бот, я — Stupid Bot!";
 		sendingMessage($text);
-	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false)) {
+	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false) or (strpos($text, 'дел') !== false)) {
 		$text = "А нихрена не умею!";
 		sendingMessage($text);
 	} else if (strpos($text, 'анекдот') !== false) {
@@ -44,7 +44,10 @@ if ($username != 'Stupid Bot') {
 		$text = "НЕ КРИЧИ НА МЕНЯ!!!1!11адын %-)";
 		sendingMessage($text);
 	} else if (strpos($text, 'help') !== false) {
-		$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто/бот, умеешь/знаешь, анекдот, help";
+		$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто/бот, умеешь/знаешь/делаешь, анекдот, help";
+		sendingMessage($text);
+	} else {
+		$text = "Моя твоя не понимать! Набери <b>help</b> и нажми Enter!";
 		sendingMessage($text);
 	}
 } else {
