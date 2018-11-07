@@ -32,7 +32,7 @@ if ($_COOKIE['ssid'] != '') {
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0;"/>
+  <meta name="viewport" content="width=device-width, height=device-height,  initial-scale=1.0, user-scalable=no, user-scalable=0"/>
   <title>Tomoru</title>
   <link rel="shortcut icon" href="https://static.wixstatic.com/media/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png/v1/fill/w_32%2Ch_32%2Clg_1%2Cusm_0.66_1.00_0.01/97075e_f1ed5c208f0a40e4a967832133241c4e%7Emv2.png" type="image/png"/>
   <!-- Bootstrap — Latest compiled and minified CSS -->
