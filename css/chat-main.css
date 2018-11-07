@@ -53,12 +53,12 @@ html, input, button, a, .bot, .btn {
   height: 15vmin;
   overflow: hidden;
   text-align: left;
-  bottom: 1vw;
+  bottom: 10vh;
 }
 #chat-input {
   position: absolute;
   left: 10vw;
-  bottom: 0vw;
+  bottom: 1vh;
 }
 @media all and (orientation:portrait) {
   html, input, button, a, .bot, .btn {
