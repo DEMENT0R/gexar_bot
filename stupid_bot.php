@@ -19,7 +19,7 @@ for ($i = 0; $i < 10; $i++){
 	if ($username != 'Stupid Bot') {
 		echo "text(".$username.") = ".$text."<br>";
 
-		if ((strpos($text, 'gexar') !== false) of (strpos($text, 'гексар') !== false)) {
+		if ((strpos($text, 'gexar') !== false) or (strpos($text, 'гексар') !== false)) {
 			$text = "Дааа, насчёт AR/VR — это в GEXAR!";
 			sendingMessage($text);
 		} else if (strpos($text, 'привет') !== false) {
