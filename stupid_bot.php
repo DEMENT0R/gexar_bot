@@ -14,7 +14,7 @@ for ($i = 0; $i < 10; $i++){
 
 	$username = $row['name'];
 	$text = $row['text'];
-	$text = strtolower($text);
+	$text = mb_strtolower($text);
 	echo "text = ".$text."<br>";
 
 	if ($username != 'StupidBot') {
