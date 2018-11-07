@@ -65,18 +65,3 @@ function sendMessage(){
 
   $('#chat-input-field').val('');
 }
-
-
-//play music
-/*
-<p onclick="musicPlay()">Кликни по этому тексту</p>
-*/
-
-function musicPlay() {
-  var audio = new Audio(); // Создаём новый элемент Audio
-  audio.src = 'music.mp3'; // Указываем путь к звуку "клика"
-  audio.autoplay = true; // Автоматически запускаем
-} 
-function musicStop() {
-  audio.stop();
-} 
