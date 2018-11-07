@@ -85,11 +85,11 @@ html, input, button, a, .bot, .btn {
     overflow: hidden;
     text-align: left;
     font-size: 3vw;
-    bottom: 28vw;
+    bottom: 28vh;
   }
   #chat-input {
     position: fixed;
     left: 10vw;
-    bottom: 3vw;
+    bottom: 3vh;
   }
 }
