@@ -76,6 +76,7 @@ if ($_COOKIE['ssid'] != '') {
 
   ?>
 
+<script src="js/chat.js"></script>
 </body>
 </html>
 
@@ -83,7 +84,3 @@ if ($_COOKIE['ssid'] != '') {
 //PHP counter ends:
 echo '<br>Сгенерировано за '.(microtime(true) - $_start_time).' сек.';
 ?>
-
-<br>
-<script src="js/bot-emo.js"></script>
-<script src="js/chat.js"></script>
