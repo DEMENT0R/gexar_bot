@@ -60,4 +60,6 @@ function sendMessage(){
   );
 
   $('#chat-input-field').val('');
+
+  $.post("stupid_bot.php");
 }
