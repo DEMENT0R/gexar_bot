@@ -99,7 +99,7 @@ html, input, button, a, .bot, .btn {
     bottom: 3vh;
   }
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-    font-size: 5vw;
+    font-size: 2vh;
   }
 
   .btn {
