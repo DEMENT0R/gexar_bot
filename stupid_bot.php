@@ -22,10 +22,10 @@ for ($i = 0; $i < 10; $i++){
 		if ((strpos($text, 'gexar') !== false) or (strpos($text, 'гексар') !== false)) {
 			$text = "Дааа, насчёт AR/VR — это в GEXAR!";
 			sendingMessage($text);
-		} else if (strpos($text, 'привет') !== false) {
+		} else if ((strpos($text, 'привет') !== false) or (strpos($text, 'здравствуй]') !== false)) {
 			$text = "Приветствую!";
 			sendingMessage($text);
-		} else if (strpos($text, 'пока') !== false) {
+		} else if ((strpos($text, 'пока') !== false) or (strpos($text, 'прощай]') !== false)) {
 			$text = "До связи!!";
 			sendingMessage($text);
 		} else if (strpos($text, 'кто ты') !== false) {
@@ -38,7 +38,7 @@ for ($i = 0; $i < 10; $i++){
 			$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
 			sendingMessage($text);
 		} else if (strpos($text, 'help') !== false) {
-			$text = "Мне известны только следующие слова: привет,пока, кто ты, умеешь, анекдот, help";
+			$text = "Мне известны слова: привет/здравствуй, пока/прощай, кто ты, умеешь, анекдот, help";
 			sendingMessage($text);
 		}
 	} else {
