@@ -77,7 +77,7 @@ html, input, button, a, .bot, .btn {
     width: 80vw;
   }
   #chat-history {
-    position: fixed;
+    position: absolute;
     /* top: 75vw; */
     left: 5vw;
     width: 90vw;
