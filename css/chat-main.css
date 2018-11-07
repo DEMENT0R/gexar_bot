@@ -97,7 +97,10 @@ html, input, button, a, .bot, .btn {
     font-size: 5vw;
   }
 
-  .btn p {
+  .btn {
     font-size: 2vh;
+  }
+  p {
+    font-size: 1vh;
   }
 }
