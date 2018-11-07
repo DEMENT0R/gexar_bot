@@ -13,7 +13,7 @@ if ($_COOKIE['ssid'] != '') {
   $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s", $table, $_COOKIE['ssid']);
   $username = $row['name'];
   if ($username =='') {
-    $username = 'friend';
+     $username = 'friend';
   }
   setcookie("user_name", $username, time()+3600*31);
   $last_time = $row['updated'];
@@ -54,7 +54,7 @@ if ($_COOKIE['ssid'] != '') {
       //include 'app.php?get_message=3'; ?>
     </div>
     <div id="chat-input">
-        <input type="text" class="bot-chat-input" name="text" id="chat-input-field" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center;"><br><br>
+        <input type="text" class="bot-chat-input" name="text" id="chat-input-field" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center;" autocomplete="off" readonly onfocus="this.removeAttribute('readonly')"><br><br>
         <button type="button" class="btn btn-primary" name="button" id="send-message">Ввод</button>
     </div>
   </div>
