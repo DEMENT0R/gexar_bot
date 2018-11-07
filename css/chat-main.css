@@ -48,7 +48,7 @@ html, input, button, a, .bot, .btn {
   height: 15vmin;
   overflow: hidden;
   text-align: left;
-  bottom: 0vw;
+  bottom: 1vw;
 }
 #chat-input {
   position: absolute;
@@ -78,12 +78,13 @@ html, input, button, a, .bot, .btn {
   }
   #chat-history {
     position: fixed;
-    top: 75vw;
+    /* top: 75vw; */
     left: 5vw;
     width: 90vw;
     height: auto;
     overflow: hidden;
     text-align: left;
+    bottom: 8vw;
   }
   #chat-input {
     position: fixed;
