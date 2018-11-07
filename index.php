@@ -82,5 +82,5 @@ if ($_COOKIE['ssid'] != '') {
 
 <?php
 //PHP counter ends:
-echo '<br>Сгенерировано за '.(microtime(true) - $_start_time).' сек.';
+echo '<br><p>Сгенерировано за '.(microtime(true) - $_start_time).' сек.</p>';
 ?>
