@@ -100,4 +100,8 @@ html, input, button, a, .bot, .btn {
   .btn {
     font-size: 5vw;
   }
+  
+  p {
+    font-size: 5vw;
+  }
 }
