@@ -13,22 +13,22 @@ for ($i = 0; $i < 10; $i++){
 	$row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $ssid);
 
 	$username = $row['name'];
-	$text = $row['text'];
+	$text = strtolower($row['text']);
 	if ($username != 'StupidBot') {
-		if ($text == 'Привет') {
+		if ($text == 'привет') {
 			$text = "Приветствую!";
 			echo "Приветствие обнаружено! Отвечаю!";
 			sendingMessage($text);
-		} else if ($text == 'Пока'){
+		} else if ($text == 'пока'){
 			$text = "До связи!!";
 			sendingMessage($text);
-		} else if ($text == 'Кто ты?'){
+		} else if ($text == 'кто ты?'){
 			$text = "StupidBot";
 			sendingMessage($text);
-		} else if ($text == 'Что ты умеешь?'){
+		} else if ($text == 'что ты умеешь?'){
 			$text = "А нихрена не умею!";
 			sendingMessage($text);
-		} else if ($text == 'Анекдот'){
+		} else if ($text == 'анекдот'){
 			$text = "У меня конфисковали самогонный аппарат. Могу ли я получить компенсацию в связи с потерей кормильца?";
 			sendingMessage($text);
 		} else if ($text == 'help'){
