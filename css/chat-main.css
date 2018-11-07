@@ -84,24 +84,20 @@ html, input, button, a, .bot, .btn {
     height: auto;
     overflow: hidden;
     text-align: left;
-    font-size: 5vw;
+    font-size: 2vh;
     bottom: 20vh;
   }
   #chat-input {
     position: fixed;
     left: 10vw;
-    font-size: 5vw;
+    font-size: 2vh;
     bottom: 3vh;
   }
   ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
     font-size: 5vw;
   }
 
-  .btn {
-    font-size: 5vw;
-  }
-
-  p {
-    font-size: 1vh;
+  .btn p {
+    font-size: 2vh;
   }
 }
