@@ -50,7 +50,7 @@ function get_cookie ( cookie_name )
 
 //send message
 function sendMessage(){
-  if ($('#chat-input-field').val()) {
+  if ($('#chat-input-field').val() != '') {
     $.post(
       "app.php",
       {
