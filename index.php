@@ -12,9 +12,11 @@ $fields = ['id', 'name', 'ssid', 'password', 'mail', 'text', 'sex', 'updated'];
 if ($_COOKIE['ssid'] != '') {
   $row = $db->getRow("SELECT * FROM ?n WHERE ssid=?s", $table, $_COOKIE['ssid']);
   $username = $row['name'];
+  /*
   if ($username =='') {
      $username = 'friend';
   }
+  */
   setcookie("user_name", $username, time()+3600*31);
   $last_time = $row['updated'];
   $debug_msg = 'Пользователь <b>'.$username.'</b> найден! ('.$last_time.')<br>';
