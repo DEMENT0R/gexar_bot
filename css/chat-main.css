@@ -43,11 +43,12 @@ html, input, button, a, .bot, .btn {
 }
 #chat-history {
   position: absolute;
-  top: 0vw;
+  /* top: 0vw; */
   width: 100%;
   height: 15vmin;
   overflow: hidden;
   text-align: left;
+  bottom: 0vw;
 }
 #chat-input {
   position: absolute;
