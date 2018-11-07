@@ -14,6 +14,8 @@ for ($i = 0; $i < 10; $i++){
 
 	$username = $row['name'];
 	$text = strtolower($row['text']);
+	echo "text = ".$text."<br>";
+
 	if ($username != 'StupidBot') {
 		if ($text == 'привет') {
 			$text = "Приветствую!";
@@ -37,7 +39,7 @@ for ($i = 0; $i < 10; $i++){
 		}
 	}
 
-	echo "text = ".$text;
+	
 
 	sleep (1);
 }
@@ -46,6 +48,7 @@ for ($i = 0; $i < 10; $i++){
 //sending message
 function sendingMessage($text){
 	global $db, $table, $ssid;
+	echo "bot_text = ".$text."<br>";
 	$db->query("INSERT INTO ".$table." SET ssid='".$ssid."', name='Stupid Bot', text='".$text."'");
 	//exit("Конец!");
 }
