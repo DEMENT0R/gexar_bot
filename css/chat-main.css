@@ -7,6 +7,7 @@ div {
 body {
   width: 100vw;
   height: 100vh;
+  font-size: 1vh;
 }
 
 html, input, button, a, .bot, .btn {
