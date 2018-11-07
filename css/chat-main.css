@@ -84,13 +84,13 @@ html, input, button, a, .bot, .btn {
     height: auto;
     overflow: hidden;
     text-align: left;
-    font-size: 3vw;
+    font-size: 5vw;
     bottom: 28vh;
   }
   #chat-input {
     position: fixed;
     left: 10vw;
-    font-size: 3vw;
+    font-size: 5vw;
     bottom: 3vh;
   }
 }
