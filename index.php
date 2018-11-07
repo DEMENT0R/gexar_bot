@@ -56,7 +56,7 @@ if ($_COOKIE['ssid'] != '') {
     </div>
     <div id="chat-input">
         <input type="text" class="bot-chat-input" name="text" id="chat-input-field" placeholder="Что бы вы хотели спросить?" value="" style="text-align: center; outline:none;" autocomplete="off" onfocus="this.placeholder=''"><br><br>
-        <button type="button" class="btn btn-primary" name="button" id="send-message">Ввод</button> <a class="btn btn-default" href="https://bot.gexar.tk/app.php?get_message=20" target="_blank">Чат...</a>
+        <button type="button" class="btn btn-primary" name="button" id="send-message">Ввод</button> <a class="btn btn-default" href="https://bot.gexar.tk/app.php?get_message=30" target="_blank">Чат...</a>
     </div>
   </div>
 
