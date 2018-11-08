@@ -19,7 +19,7 @@ if ($text == '') {
   $text = "empty";
 }
 
-$url = 'bot.gexar.tk/request_test.php';
+$url = 'http://bot.gexar.tk/request_test.php';
 $params = array(
   'ssid' => $ssid,
   'text' => $text,
