@@ -1,19 +1,31 @@
+<form action="" method="post">
+  <input placeholder="ssid" name="ssid">
+  <input placeholder="text" name="text">
+  <button type="submit" name="button">Send</button>
+</form>
+
 <?php
 
-$ssid = "0000";
-$text = "ABCabc";
+$ssid = $_COOKIE['ssid'];
+if ($ssid == '') {
+  $ssid = "0000";
+}
+$text = $_POST['text'];
+if ($text == '') {
+  $text = "empty";
+}
 
 $url = 'http://localhost/gexar_bot/request_test.php?test=1';
 $params = array(
-    'ssid' => $ssid,
-    'text' => $text,
+  'ssid' => $ssid,
+  'text' => $text,
 );
 $result = file_get_contents($url, false, stream_context_create(array(
-    'http' => array(
-        'method'  => 'POST',
-        'header'  => 'Content-type: application/x-www-form-urlencoded',
-        'content' => http_build_query($params)
-    )
+  'http' => array(
+    'method'  => 'POST',
+    'header'  => 'Content-type: application/x-www-form-urlencoded',
+    'content' => http_build_query($params)
+  )
 )));
 
 echo $result;
