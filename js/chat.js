@@ -71,7 +71,7 @@ function sendMessage(){
     //sending to NEUROBOT!!!//
     //////////////////////////
     $.post(
-      "http://localhost/gexar_bot/post_sender.php",
+      "post_sender.php",
       {
         send_message: "1",
         id: 0,
