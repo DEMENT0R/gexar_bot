@@ -1,7 +1,7 @@
 <?php
 
-echo $_POST;
-echo "<br>";
-echo $_GET;
+var_dump($_POST);
+echo "<hr>";
+var_dump($_GET);
 
 ?>
