@@ -34,7 +34,7 @@ if ($username != 'Stupid Bot') {
 		$text = "Я не просто бот, я — Stupid Bot! Думаешь, стоит переводить? Я думаю — нет!";
 		sendingMessage($text);
 	} else if ((strpos($text, 'беси') !== false) or (strpos($text, 'пись') !== false) or (strpos($text, 'жоп') !== false)) {
-		$text = "Не бесись-ка! ;)";
+		$text = "Не бесись-ка! Поторопись-ка! ;)";
 		sendingMessage($text);
 	} else if ((strpos($text, 'умеешь') !== false) or (strpos($text, 'знаешь') !== false) or (strpos($text, 'можешь') !== false)) {
 		$text = "А нихрена не умею!";
