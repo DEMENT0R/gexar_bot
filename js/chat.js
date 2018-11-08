@@ -34,7 +34,7 @@ function UpdateMessages(){
 //AJAX POST DEBUG
 function onAjaxSuccess(data)
 {
-  //alert(data);
+  alert(data);
 }
 
 //get cookie
@@ -51,6 +51,9 @@ function get_cookie ( cookie_name )
 //send message
 function sendMessage(){
   if ($('#chat-input-field').val() != '') {
+    ///////////////////
+    //default sending//
+    ///////////////////
     $.post(
       "app.php",
       {
@@ -61,7 +64,24 @@ function sendMessage(){
         text: $('#chat-input-field').val(),
       //updated: ''
     },
-    onAjaxSuccess //debug
+      //debug
+      //onAjaxSuccess
+    );
+    //////////////////////////
+    //sending to NEUROBOT!!!//
+    //////////////////////////
+    $.post(
+      "http://localhost/gexar_bot/post_sender.php",
+      {
+        send_message: "1",
+        id: 0,
+        ssid: get_cookie ( "ssid" ),
+        name: get_cookie ( "user_name" ),
+        text: $('#chat-input-field').val(),
+      //updated: ''
+    },
+      //debug
+      onAjaxSuccess
     );
 
     $('#chat-input-field').val('');
