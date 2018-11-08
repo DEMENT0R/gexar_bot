@@ -1,5 +1,3 @@
-<h1>Request Test Page</h1>
-<form action="" method=post><input name=test_request></form>
 <?php
 
 echo "<hr>";
