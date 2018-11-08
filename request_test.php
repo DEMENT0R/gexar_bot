@@ -1,8 +1,8 @@
 <?php
 
-echo "<hr>";
+//echo "<hr>";
 var_dump($_POST);
-echo "<hr>";
+//echo "<hr>";
 var_dump($_GET);
 
 ?>
