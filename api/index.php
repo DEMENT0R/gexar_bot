@@ -40,7 +40,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 ?>
 <?php
 //PHP counter ends:
-$output[1] =  '<!-- generate time: '.round((microtime(true) - $_start_time), 5).' sec.';
+$output[1] =  round((microtime(true) - $_start_time), 5).' sec.';
 echo json_encode($output);
 
 ?>
