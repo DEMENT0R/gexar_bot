@@ -17,6 +17,7 @@ $table  = "chats";
 $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 
 $db->query("SET NAMES utf8");
+$db->query("SET NAMES utf8 COLLATE utf8_unicode_ci");
 
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
