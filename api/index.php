@@ -34,7 +34,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 
 		//$output[0] = json_encode($row);
 		//$output[0] = iconv( 'cp1251', 'utf-8', $row['text'] );
-		$output[0] = html_entity_decode($row['text'], ENT_NOQUOTES, 'UTF-8')
+		$output[0] = html_entity_decode($row['text'], ENT_NOQUOTES, 'UTF-8');
 
 	} elseif ($_POST['send_message']) {
 		////////////////////
