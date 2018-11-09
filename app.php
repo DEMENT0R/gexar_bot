@@ -14,8 +14,7 @@ $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
 	$data = $db->filterArray($_POST, $fields);
-	if (isset($_POST['_get_message']))
-	{
+	if (isset($_POST['_get_message'])) {
 		$db->query("SELECT FROM ?n WHERE id=?i", $table, $_POST['get_message']);
 	} elseif ($_POST['send_message']) {
 		////////////////////
