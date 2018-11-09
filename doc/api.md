@@ -14,8 +14,5 @@
 	* text — текст сообщения
 
 4. Для ручного теста можно вставить в строку браузера:
-<<<<<<< HEAD
+
 `data:text/html,<form action="http://bot.gexar.tk/api/" method="post"><input name="send_message" value="1"><input name="ssid"><input name="name"><input name="text"><button type="submit">Send</button></form>`
-=======
-> data:text/html, <form action="http://bot.gexar.tk/api/" method="post"><input name="send_message" value="1"><input name="ssid"><input name="name"><input name="text"><button type="submit">Send</button></form>
->>>>>>> 252b17e75d66690792f28feef6a1ca6088198244
