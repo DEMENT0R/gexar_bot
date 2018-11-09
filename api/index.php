@@ -57,5 +57,6 @@ $output[1] =  round((microtime(true) - $_start_time), 5).' sec.';
 
 
 echo json_encode($output);
-
+echo "<br>";
+echo json_encode(iconv( 'cp1251', 'utf-8', $output ));
 ?>
