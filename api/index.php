@@ -33,8 +33,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		//echo 'SEND MESSAGE = '.$_POST;
 		$output[0] =  "message sended";
 	}
-	header("Location: http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
-	exit;
+	//header("Location: http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
+	//exit;
 } else {
 	//echo "<h1>Not POST method!!!</h1>";
 	$output[0] = "NO POST!";
