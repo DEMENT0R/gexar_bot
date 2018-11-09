@@ -24,6 +24,8 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		//GETting messages//
 		////////////////////
 		$db->query("SELECT FROM ?n WHERE ssid=?s ORDER BY updated DESC LIMIT 1", $table, $_POST['ssid']);
+		echo json_encode($db)."<hr>";
+		
 		$output[0] = "message got";
 	} elseif ($_POST['send_message']) {
 		////////////////////
