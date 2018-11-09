@@ -19,15 +19,20 @@ if ($text == '') {
   $text = "empty";
 }
 
-$url = 'http://'.$_SERVER['HTTP_HOST'].'/request_test.php';
+if (!$_GET['url']){
+  $url = 'http://'.$_SERVER['HTTP_HOST'].'/request_test.php';
+} else {
+  $url = $_GET['url'];
+}
+
 $params = array(
-  'ssid' => $ssid,
-  'text' => $text,
+  'sessionid' => $ssid,
+  'message' => $text
 );
 $result = file_get_contents($url, false, stream_context_create(array(
   'http' => array(
     'method'  => 'POST',
-    'header'  => 'Content-type: application/x-www-form-urlencoded',
+    'header'  => 'Content-type: application/json',
     'content' => http_build_query($params)
   )
 )));
