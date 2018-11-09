@@ -29,7 +29,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		//echo json_encode($db)."<hr>";
 		//echo json_encode($row)."<hr>";
 
-		$output[0] = "message got";
+		$output[0] = json_encode($row);
 	} elseif ($_POST['send_message']) {
 		////////////////////
 		//SENDing messages//
