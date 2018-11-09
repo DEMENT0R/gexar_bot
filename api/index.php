@@ -33,7 +33,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		//echo json_encode($row)."<hr>";
 
 		//$output[0] = json_encode($row);
-		$output[0] = $row['text'];
+		$output[0] = iconv( 'cp1251', 'utf-8', $row['text'] );
 
 	} elseif ($_POST['send_message']) {
 		////////////////////
@@ -57,6 +57,4 @@ $output[1] =  round((microtime(true) - $_start_time), 5).' sec.';
 
 
 echo json_encode($output);
-echo "<br>";
-echo json_encode(iconv( 'cp1251', 'utf-8', $output ));
 ?>
