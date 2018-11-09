@@ -16,6 +16,8 @@ $db     = new SafeMysql();
 $table  = "chats";
 $fields = ['id', 'ssid', 'name', 'text', 'updated'];
 
+$db->query("SET NAMES utf8");
+
 if($_SERVER['REQUEST_METHOD']=='POST')
 {
 	$data = $db->filterArray($_POST, $fields);
