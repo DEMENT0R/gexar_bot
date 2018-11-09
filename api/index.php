@@ -4,8 +4,8 @@ $_start_time = microtime(true);
 ?>
 <?php
 
-var_dump($_POST);
-echo "<hr>";
+//var_dump($_POST);
+//echo "<hr>";
 
 $output = ['', ''];
 
@@ -27,7 +27,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		$row = $db->getRow("SELECT * FROM ?n WHERE `ssid`=?s ORDER BY updated DESC LIMIT 1", $table, $_POST['ssid']);
 						//	SELECT * FROM `chats` WHERE ssid='123' ORDER BY updated DESC LIMIT 1
 		//echo json_encode($db)."<hr>";
-		echo json_encode($row)."<hr>";
+		//echo json_encode($row)."<hr>";
 
 		$output[0] = "message got";
 	} elseif ($_POST['send_message']) {
