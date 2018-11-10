@@ -61,8 +61,7 @@ function sendMessage(){
         id: 0,
         ssid: get_cookie ( "ssid" ),
         name: get_cookie ( "user_name" ),
-        text: $('#chat-input-field').val(),
-      //updated: ''
+        text: $('#chat-input-field').val()
     },
       //debug
       //onAjaxSuccess
