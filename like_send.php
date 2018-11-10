@@ -62,9 +62,22 @@ if ($err) {
   $db->query($query);
 } else {
   //echo $response;
-  $rest = substr($response, 0, 370);
-  $query = "INSERT INTO ".$table." SET name='Сашин Бот', ssid='".$ssid."', text='".$rest."'";
-  echo $query;
+  //$text_to_db = substr($response, 0, 370);
+  //echo "<hr>";
+  $str_operation = preg_match_all('#Текст:(.+?)---#is', $response, $arr);
+  
+  echo '<pre>';
+  print_r($arr);
+  echo '</pre>';
+
+
+  //$text_to_db = $arr[1][0]."<br>".$arr[1][1]."<br>".$arr[1][2];
+  $text_to_db = $arr[1][0];
+  //$text_to_db = $arr[1][rand (0, 2)];
+  echo $text."<br>";
+  echo $text_to_db;
+  $query = "INSERT INTO ".$table." SET name='Сашин Бот', ssid='".$ssid."', text='".$text_to_db."'";
+  //echo $query;
   $db->query($query);
 }
 
