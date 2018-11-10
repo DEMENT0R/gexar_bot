@@ -53,17 +53,6 @@ if ($_GET['get_message'] > 0 ) {
 	}
 }
 
-//GET
-if ($_GET) {
-	if ($_GET['ssid'] != '') {
-	  $ssid = $_GET['ssid'];
-	}
-	if ($_GET['text'] != '') {
-	  $text = $_GET['text'];
-	}
-	$db->query("INSERT INTO ?n SET ?u", $table, $data);
-}
-
 ?>
 <?php
 //PHP counter ends:
