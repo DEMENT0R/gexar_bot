@@ -62,8 +62,8 @@ if ($err) {
   $db->query($query);
 } else {
   //echo $response;
-  $rest = substr($response, 0, 300);
-  $query = "INSERT INTO ".$table." SET ssid='".$ssid."', text='".$rest."'";
+  $rest = substr($response, 0, 350);
+  $query = "INSERT INTO ".$table." SET name='Сашин Бот', ssid='".$ssid."', text='".$rest."'";
   echo $query;
   $db->query($query);
 }
