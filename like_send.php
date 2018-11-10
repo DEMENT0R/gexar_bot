@@ -55,7 +55,7 @@ if ($err) {
   $error_msg = "cURL Error #:" . $err;
   echo $error_msg;
   echo "<hr>";
-  $query = "INSERT INTO ".$table." SET ssid=".$ssid.", text='".$error_msg."'";
+  $query = "INSERT INTO ".$table." SET ssid='".$ssid."', text='".$error_msg."'";
   echo $query;
   $db->query($query);
 } else {
