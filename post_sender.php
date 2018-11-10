@@ -28,6 +28,7 @@ if (!$_GET['url']){
 
 echo "url = ".$url."<hr>";
 
+/*
 $params = array(
   'sessionid' => $ssid,
   'message' => $text
@@ -41,29 +42,26 @@ $result = file_get_contents($url, false, stream_context_create(array(
 )));
 
 echo $result;
-
+*/
 
 ?>
 
 <?php
-/*
+
 $url = $_GET['url'];
 
 $data='{"sessionid": "000","message": "Hello!"}';
 $json=json_encode($data);
 
-$ch = curl_init($url);
+if ($curl = curl_init()) {
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, http_build_query(['out'=>$json]));
+    $response = curl_exec($curl);
+    curl_close($curl);
 
-curl_setopt($ch,CURLOPT_POSTFIELDS,$data);
-curl_setopt($ch,CURLOPT_PROTOCOLS,CURLPROTO_HTTPS);
-curl_setopt($ch,CURLOPT_HTTP_VERSION,CURL_HTTP_VERSION_1_1);
-curl_setopt($ch, CURLOPT_CUSTOMREQUEST,'POST');
-curl_setopt($ch, CURLOPT_HTTPHEADER, array('Authorization: Basic lock', 'Accept: application/json', 'Content-Type: application/json'));
-curl_setopt($ch, CURLOPT_POSTFIELDS, $json);
-curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-$result = curl_exec($ch);
-curl_close($ch);
+    echo $response;
+}
 
-echo json_decode($result);
-*/
 ?>

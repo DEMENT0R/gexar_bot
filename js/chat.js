@@ -70,6 +70,7 @@ function sendMessage(){
     //////////////////////////
     //sending to NEUROBOT!!!//
     //////////////////////////
+    /*
     $.post(
       "post_sender.php",
       {
@@ -83,6 +84,7 @@ function sendMessage(){
       //debug
       onAjaxSuccess
     );
+    */
 
     $('#chat-input-field').val('');
   } else {

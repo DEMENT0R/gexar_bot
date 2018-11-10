@@ -22,6 +22,7 @@ if($_SERVER['REQUEST_METHOD']=='POST')
 		////////////////////
 		$db->query("INSERT INTO ?n SET ?u", $table, $data);
 		//echo 'SEND MESSAGE = '.$_POST;
+		file_get_contents('http://bot.gexar.tk/like_send.php?ssid='.$ssid.'&text='.$text);
 	}
 	header("Location: http://".$_SERVER['HTTP_HOST'].$_SERVER['PHP_SELF']);
 	exit;
@@ -50,6 +51,17 @@ if ($_GET['get_message'] > 0 ) {
 	} else {
 		echo "<b>Tomoru:</b> Т.к. сообщений ещё нет, выводим... Привет, друг!";
 	}
+}
+
+//GET
+if ($_GET) {
+	if ($_GET['ssid'] != '') {
+	  $ssid = $_GET['ssid'];
+	}
+	if ($_GET['text'] != '') {
+	  $text = $_GET['text'];
+	}
+	$db->query("INSERT INTO ?n SET ?u", $table, $data);
 }
 
 ?>
