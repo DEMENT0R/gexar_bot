@@ -1,5 +1,7 @@
 <?php
 
+sleep(2);
+
 //SafeMysql
 include 'classes/safemysql.class.php';
 $db     = new SafeMysql();
