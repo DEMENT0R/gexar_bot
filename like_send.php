@@ -61,7 +61,7 @@ if ($err) {
 } else {
   //echo $response;
   $rest = substr($response, 0, 100);
-  $query = "INSERT INTO ".$table." SET ssid=".$ssid.", text='".$rest."'";
+  $query = "INSERT INTO ".$table." SET ssid='".$ssid."', text='".$rest."'";
   echo $query;
   $db->query($query);
 }
