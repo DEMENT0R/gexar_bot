@@ -1,5 +1,11 @@
 <?php
 
+//SafeMysql
+include 'classes/safemysql.class.php';
+$db     = new SafeMysql();
+$table  = "chats";
+$fields = ['id', 'ssid', 'name', 'text', 'updated'];
+
 //URL
 $url = "https://likegroupbot.azurewebsites.net/bot/callback/gxr";
 
@@ -20,6 +26,7 @@ if ($_GET['ssid'] != '') {
 if ($_GET['text'] != '') {
   $text = $_GET['text'];
 }
+
 
 $curl = curl_init();
 
@@ -45,13 +52,21 @@ $err = curl_error($curl);
 curl_close($curl);
 
 if ($err) {
-  echo "cURL Error #:" . $err;
+  $error_msg = "cURL Error #:" . $err;
+  echo $error_msg;
+  echo "<hr>";
+  $query = "INSERT INTO ".$table." SET ssid=".$ssid.", text='".$error_msg."'";
+  echo $query;
+  $db->query($query);
 } else {
-  echo $response;
-  $rest = substr($response, 0, 30);
+  //echo $response;
+  $rest = substr($response, 0, 100);
+  $query = "INSERT INTO ".$table." SET ssid=".$ssid.", text='".$rest."'";
+  echo $query;
+  $db->query($query);
 }
 
-$rest;
-file_get_contents('http://bot.gexar.tk/like_send.php?ssid='.$ssid.'&text='.$text);
+//file_get_contents('http://bot.gexar.tk/like_send.php?ssid='.$ssid.'&text='.$text);
+
 
 ?>
