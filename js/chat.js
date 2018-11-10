@@ -70,21 +70,15 @@ function sendMessage(){
     //////////////////////////
     //sending to NEUROBOT!!!//
     //////////////////////////
-    /*
     $.post(
-      "post_sender.php",
+      "like_send.php",
       {
-        send_message: "1",
-        id: 0,
         ssid: get_cookie ( "ssid" ),
-        name: get_cookie ( "user_name" ),
-        text: $('#chat-input-field').val(),
-      //updated: ''
+        text: $('#chat-input-field').val()
     },
       //debug
-      onAjaxSuccess
+      //onAjaxSuccess
     );
-    */
 
     $('#chat-input-field').val('');
   } else {
