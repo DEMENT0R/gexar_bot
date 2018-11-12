@@ -1,6 +1,6 @@
 <?php
 
-sleep(2);
+sleep(1);
 
 //SafeMysql
 include 'classes/safemysql.class.php';
@@ -65,7 +65,7 @@ if ($err) {
   //$text_to_db = substr($response, 0, 370);
   //echo "<hr>";
   $str_operation = preg_match_all('#Текст:(.+?)---#is', $response, $arr);
-  
+
   echo '<pre>';
   print_r($arr);
   echo '</pre>';
