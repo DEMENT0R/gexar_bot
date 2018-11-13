@@ -52,7 +52,7 @@ if ($_COOKIE['ssid'] != '') {
     <div id="chat-history">
       ...
 
-      <?php //Sterting include
+      <?php //Starting include
       //include 'app.php?get_message=3'; ?>
     </div>
     <div id="chat-input">
